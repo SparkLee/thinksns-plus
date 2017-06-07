@@ -2,18 +2,18 @@
 
 namespace Zhiyi\Plus\Models\Concerns;
 
-use Zhiyi\Plus\Models\WalletRecord;
+use Zhiyi\Plus\Models\WalletCharge;
 
-trait UserWalletRecord
+trait UserWalletCharge
 {
     /**
-     * 用户记录明细.
+     * User wallet charges.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      * @author Seven Du <shiweidu@outlook.com>
      */
-    public function walletRecords()
+    public function walletCharges()
     {
-        return $this->hasMany(WalletRecord::class, 'user_id', 'id');
+        return $this->hasMany(WalletCharge::class, 'user_id', 'id');
     }
 }
